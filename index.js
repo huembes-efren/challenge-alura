@@ -16,7 +16,7 @@ if (texto.length !=0){
 
  } else{
     tituloMensaje.textContent = "Ningún mensaje fue encontrado"
-    window.alert("Debes ingresar un texto") ;
+    swal("Ups!!!","Debes ingresar un texto","error");
  }
 }
 
@@ -38,7 +38,7 @@ if (texto.length !=0){
 
  } else{
     tituloMensaje.textContent = "Ningún mensaje fue encontrado"
-    window.alert("Debes ingresar un texto") ;
+    swal("Ups!!!","Debes ingresar un texto","error");
  }
 }
 
