@@ -1,6 +1,6 @@
 function encriptar() {
     let texto = document.getElementById("texto").value;
-    let tituloMensaje = document.getElementById("titulo-mensaje")
+    let tituloMensaje = document.getElementById("tituloMensaje")
 
 
     let textoCifrado = texto
@@ -16,13 +16,13 @@ if (texto.length !=0){
 
  } else{
     tituloMensaje.textContent = "Ningún mensaje fue encontrado"
-    window.alert("Debes ingresar un texto");
+    window.alert("Debes ingresar un texto") ;
  }
 }
 
 function desencriptar() {
     let texto = document.getElementById("texto").value;
-    let tituloMensaje = document.getElementById("titulo-mensaje")
+    let tituloMensaje = document.getElementById("tituloMensaje")
 
 
     let textoCifrado = texto
@@ -34,27 +34,27 @@ function desencriptar() {
 
 if (texto.length !=0){
     document.getElementById("resultado").value=  textoCifrado;
-    tituloMensaje.textContent = "Texto encriptado con éxito";
+    tituloMensaje.textContent = "Texto desencriptado con éxito";
 
  } else{
     tituloMensaje.textContent = "Ningún mensaje fue encontrado"
-    window.alert("Debes ingresar un texto");
+    window.alert("Debes ingresar un texto") ;
  }
 }
 
 var textoCifrado =document.querySelector("resultado");
-var botonCopiar = document.querySelector("botonCopiar");
+var btn = document.querySelector("btn");
 var copiar = document.querySelector("copiar");
 
 function bontonHandler(){
     copiar.textContent = textoCifrado.value;
     textoCifrado.value = "";
-
+}
     const $content = document.getElementById("resultado");
     $btn = document.getElementById("btn");
 
-    $btn.addEventListener("click"), e =>{
+    $btn.addEventListener("click", e =>{
         $content.select();
-        document.execCommand("copy");
+        document.execCommand("cut");
     }
-}
+)
