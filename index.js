@@ -1,8 +1,6 @@
 function encriptar() {
     let texto = document.getElementById("texto").value;
-   /*let tituloMensaje = document.getElementById("tituloMensaje");
-    let parrafo = document.getElementById("parrafo");
-    let muñeco = document.getElementById("muñeco");*/
+    let tituloMensaje = document.getElementById("titulo-mensaje")
 
 
     let textoCifrado = texto
@@ -12,14 +10,51 @@ function encriptar() {
                     .replace(/o/gi, "ober")
                     .replace(/u/gi, "ufat")
 
-if (document.getElementById("texto").value.length !=0) {   
-    document.getElementById("texto").value = textoCifrado;
-    document.getElementById("tituloMensaje").textContent = "Texto Encriptado con exito";
-    document.getElementById("parrafo").textContent = "";
-    document.getElementById("texto").value = textoCifrado;
+if (texto.length !=0){
+    document.getElementById("resultado").value=  textoCifrado;
+    tituloMensaje.textContent = "Texto encriptado con éxito";
 
-} else{
-    document.getElementById("muñeco").src = "./img/muñeco.png";
-    alert("Debes Ingresar algún texto");
-}
+ } else{
+    tituloMensaje.textContent = "Ningún mensaje fue encontrado"
+    window.alert("Debes ingresar un texto");
  }
+}
+
+function desencriptar() {
+    let texto = document.getElementById("texto").value;
+    let tituloMensaje = document.getElementById("titulo-mensaje")
+
+
+    let textoCifrado = texto
+                    .replace(/enter/gi, "e")
+                    .replace(/imes/gi, "i")
+                    .replace(/ai/gi, "a")
+                    .replace(/ober/gi, "o")
+                    .replace(/ufat/gi, "u")
+
+if (texto.length !=0){
+    document.getElementById("resultado").value=  textoCifrado;
+    tituloMensaje.textContent = "Texto encriptado con éxito";
+
+ } else{
+    tituloMensaje.textContent = "Ningún mensaje fue encontrado"
+    window.alert("Debes ingresar un texto");
+ }
+}
+
+var textoCifrado =document.querySelector("resultado");
+var botonCopiar = document.querySelector("botonCopiar");
+var copiar = document.querySelector("copiar");
+
+function bontonHandler(){
+    copiar.textContent = textoCifrado.value;
+    textoCifrado.value = "";
+
+    const $content = document.getElementById("resultado");
+    $btn = document.getElementById("btn");
+
+    $btn.addEventListener("click"), e =>{
+        $content.select();
+        document.execCommand("copy");
+    }
+}

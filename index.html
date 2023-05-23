@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
+    <div class="logo">
+        <img class="logoImg" src="img/logo alura.jfif">
+<h1 class="titulito">Encriptador de Texto</h1>
+    </div>
 <div class="Encritar">
     <textarea 
     name="texto" 
@@ -37,19 +42,26 @@
 </div>
 </div>
 
+<footer>
+    <p class="copyright">© Copyright CR property of efrén huembes-2023</p></p>
+</footer>
 
-<div class="encriptado">
-    <img src="img/robo-big-img.png" alt="" id="muñeco">
-    <div class="mensaje-encriptado" id="mensaje-encriptado">
+<div class="encriptado"
+     class="mensaje-encriptado" id="mensaje-encriptado">
+     <img class="imgPrincipal" src="img/robo-big-img.png">
         <h2 id="tituloMensaje">¡Ningún mensaje encontrado!</h2>
-        <p id="parrafo">Ingrese el texto que desea encriptar o desencriptar</p>
-        <!--<textarea 
+
+        <textarea 
+        type="text"
         name="mensaje" 
-        id="mensaje" 
+        class="resultado"
+        id="resultado" 
         cols="30" 
         rows="10" 
-        class="mensaje"></textarea>-->
-    </div>
+        placeholder="Ningún texto recibido"
+    ></textarea>
+    
+    <button id="btn" class="botonCopiar"></i>Copiar</button>
 </div>
 </div>
 </body>
